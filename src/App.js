@@ -1,16 +1,21 @@
+import Home from '../src/Screens/Home.js'
+import { 
+  BrowserRouter as Router, 
+  Routes, 
+  Route
+
+} from 'react-router-dom';
+import Login from './Screens/Login.js';
 
 function App() {
   return (
-    <>
-      <div>
-        <h2 style={darkMode}>Hello World</h2>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </Router>
   );
-}
-
-const darkMode = {
-  color: 'white'
 }
 
 export default App;
